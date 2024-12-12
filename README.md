@@ -2,7 +2,7 @@ Based on the information you provided, here is a sample `README.md` for your pro
 
 ---
 
-# Real-Time Event Ticketing System CLI
+# Real-Time Event Ticketing System 
 
 ## Overview
 
