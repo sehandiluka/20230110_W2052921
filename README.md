@@ -103,7 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For inquiries, please reach out to:
-- Email: [your-email@example.com]
+- Email: [sehandiluka@gmail.com]
 - GitHub: [https://github.com/sehandiluka](https://github.com/sehandiluka)
 
 ---
