@@ -1,28 +1,36 @@
+Based on the information you provided, here is a sample `README.md` for your project:
 
+---
 
 # Real-Time Event Ticketing System CLI
 
-## Description
-The Real-Time Event Ticketing System CLI is a multithreaded Java application that simulates the release and retrieval of tickets in real-time. It allows users to interact with the system via the command line, configuring ticket parameters, managing a ticket pool, and monitoring ticket release and purchase activities.
+## Overview
 
-The system consists of several classes working together:
-- **TicketingSystem.java**: Manages user input, validation, and multithreading for vendors and customers.
-- **TicketPool.java**: Handles the shared pool of tickets with thread-safe operations.
-- **Vendor.java**: Releases tickets into the pool at a specified rate.
-- **Customer.java**: Retrieves tickets from the pool at a specified rate.
-- **Configuration.java**: Saves and loads system configurations using JSON.
-- **Logger.java**: Logs system events and activities to a file.
+The **Real-Time Event Ticketing System CLI** is a command-line application designed to simulate a ticketing system where vendors release tickets, and customers purchase them at specified rates. It uses multithreading to handle concurrent operations and ensures thread-safe interactions with a shared ticket pool. The system also allows configuration settings to be saved and loaded for future use.
+
+This project combines **React.js** for the frontend and **Spring Boot** for the backend, providing a dynamic and robust solution for event ticketing management.
 
 ## Features
-- Multithreaded ticket release and retrieval by vendors and customers.
-- Input validation to ensure correct configuration settings.
-- Ability to save and load system configurations.
-- Timestamped logging of system events.
-- Graceful termination of system via command input.
+
+- **Multithreading**: Simultaneous ticket release by vendors and ticket retrieval by customers.
+- **Ticket Pool Management**: A synchronized pool ensures thread-safe ticket release and retrieval.
+- **User Configuration**: Users can load or manually configure ticket system parameters such as maximum capacity, total tickets, release rate, and retrieval rate.
+- **Logging**: System events are logged to a text file for monitoring.
+- **Configuration Management**: Configuration settings can be saved to and loaded from a JSON file.
+
+## Technologies Used
+
+- **Frontend**: React.js
+- **Backend**: Spring Boot
+- **Java**: For core system logic (TicketingSystem.java, TicketPool.java, Vendor.java, Customer.java, Configuration.java, Logger.java)
+- **JSON**: For saving and loading configurations
+- **Gson Library**: For JSON serialization and deserialization
+- **Multithreading**: For concurrent ticket release and retrieval
+- **Logging**: Thread-safe event logging to a text file
 
 ## Installation
 
-1. Clone the repository to your local machine:
+1. Clone the repository:
    ```bash
    git clone https://github.com/sehandiluka/20230110_W2052921.git
    ```
@@ -32,66 +40,72 @@ The system consists of several classes working together:
    cd 20230110_W2052921
    ```
 
-3. Compile the Java files:
+### Backend (Spring Boot)
+
+1. Navigate to the backend directory:
    ```bash
-   javac *.java
+   cd backend
    ```
 
-4. Run the TicketingSystem:
+2. Install dependencies and build the project:
    ```bash
-   java TicketingSystem
+   mvn clean install
+   ```
+
+3. Run the Spring Boot application:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+### Frontend (React.js)
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the React application:
+   ```bash
+   npm start
    ```
 
 ## Usage
-Once the system is running, you can:
-- **Configure the system**: Either load a saved configuration or enter values for maximum capacity, total tickets, release rate, and retrieval rate.
-- **Run vendors and customers**: The system will simulate the release and retrieval of tickets by vendors and customers.
-- **Stop the system**: Type `q` to gracefully terminate the application.
 
-### Example Command Input
-```text
-Enter maximum ticket capacity: 100
-Enter total tickets: 1000
-Enter ticket release rate (tickets per second): 5
-Enter customer retrieval rate (tickets per second): 3
-```
+1. Launch the application and interact with the system through the command-line interface.
+2. The system will prompt you to either load a saved configuration or enter values manually (e.g., maximum capacity, total tickets, release rate, retrieval rate).
+3. Vendors and customers will simultaneously interact with the ticket pool based on the configured rates.
+4. You can stop the system anytime by entering the "q" command.
 
-## Classes Overview
-### `TicketingSystem.java`
-- Manages user input and system configuration.
-- Includes input validation and multithreading management for vendor and customer operations.
+## Configuration
 
-### `TicketPool.java`
-- A thread-safe class for managing the ticket pool with synchronized methods for adding and removing tickets.
+- **Maximum Capacity**: The total number of tickets that can be in the pool at any given time.
+- **Total Tickets**: The total number of tickets that will be available to release.
+- **Ticket Release Rate**: The rate at which the vendor releases tickets into the pool.
+- **Ticket Retrieval Rate**: The rate at which customers purchase tickets from the pool.
 
-### `Vendor.java`
-- Releases tickets into the pool at a specified rate using multithreading.
+## Logging
 
-### `Customer.java`
-- Purchases tickets from the pool at a specified rate using multithreading.
-
-### `Configuration.java`
-- Saves and loads system configurations to/from a JSON file.
-
-### `Logger.java`
-- Logs system events and messages to a log file (`log.txt`).
-
-## Technologies Used
-- **Java**: Main programming language for the application.
-- **Gson**: Library used for JSON serialization and deserialization.
-- **Multithreading**: Used for concurrent operations by vendors and customers.
-- **File Handling**: For saving and loading configurations and logging events.
+The system logs events such as ticket releases, purchases, and other actions to `log.txt`. This file is created automatically and updated with each event.
 
 ## Contributing
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Commit your changes.
-4. Push the branch to your fork.
-5. Open a pull request to contribute your changes.
+
+Contributions are welcome! Feel free to fork the repository, create a branch, and submit a pull request with your changes.
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For inquiries, please reach out to:
+- Email: [your-email@example.com]
+- GitHub: [https://github.com/sehandiluka](https://github.com/sehandiluka)
 
 ---
 
-Feel free to adjust the content as needed based on any additional features or instructions!
+Let me know if you'd like to make any adjustments or add specific sections!
