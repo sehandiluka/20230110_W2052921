@@ -1,5 +1,3 @@
-Based on the details you provided, here is a `README.md` template for your Real-Time Event Ticketing System CLI project:
-
 ---
 
 # Real-Time Event Ticketing System CLI
